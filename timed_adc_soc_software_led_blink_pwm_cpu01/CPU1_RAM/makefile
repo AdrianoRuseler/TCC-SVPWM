@@ -21,6 +21,14 @@ ORDERED_OBJS += \
 "./F2837xS_SysCtrl.obj" \
 "./F2837xS_usDelay.obj" \
 "./timed_adc_soc_software_led_blink_epwm_cpu01.obj" \
+"./Source/ADC.obj" \
+"./Source/ISR.obj" \
+"./Source/Stage0.obj" \
+"./Source/Stage1.obj" \
+"./Source/Stage2.obj" \
+"./Source/Stage3.obj" \
+"./Source/Test.obj" \
+"./Source/ePWM.obj" \
 $(GEN_CMDS__FLAG) \
 -lrts2800_fpu32.lib \
 -l2837xS_Generic_RAM_lnk.cmd \
@@ -35,7 +43,9 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include Source/subdir_vars.mk
 -include subdir_rules.mk
+-include Source/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -151,7 +161,7 @@ all: timed_adc_soc_software_led_blink_epwm_cpu01.out
 timed_adc_soc_software_led_blink_epwm_cpu01.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --define=CPU1 -g --diag_suppress=10063 --diag_warning=225 --display_error_number -z -m"timed_adc_soc_software_led_blink_epwm_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/include" -i"C:/ti/c2000/C2000Ware_1_00_04_00/device_support/f2837xs/common/cmd" -i"C:/ti/c2000/C2000Ware_1_00_04_00/device_support/f2837xs/headers/cmd" --reread_libs --display_error_number --xml_link_info="timed_adc_soc_software_led_blink_epwm_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "timed_adc_soc_software_led_blink_epwm_cpu01.out" $(ORDERED_OBJS)
+	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --fp_mode=relaxed --define=CPU1 -g --diag_suppress=10063 --diag_warning=225 --display_error_number -z -m"timed_adc_soc_software_led_blink_epwm_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/include" -i"C:/ti/c2000/C2000Ware_1_00_04_00/device_support/f2837xs/common/cmd" -i"C:/ti/c2000/C2000Ware_1_00_04_00/device_support/f2837xs/headers/cmd" --reread_libs --display_error_number --xml_link_info="timed_adc_soc_software_led_blink_epwm_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "timed_adc_soc_software_led_blink_epwm_cpu01.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
@@ -165,8 +175,8 @@ timed_adc_soc_software_led_blink_epwm_cpu01.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "F2837xS_Adc.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_CpuTimers.obj" "F2837xS_DefaultISR.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "timed_adc_soc_software_led_blink_epwm_cpu01.obj" 
-	-$(RM) "F2837xS_Adc.d" "F2837xS_CpuTimers.d" "F2837xS_DefaultISR.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "timed_adc_soc_software_led_blink_epwm_cpu01.d" 
+	-$(RM) "F2837xS_Adc.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_CpuTimers.obj" "F2837xS_DefaultISR.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "timed_adc_soc_software_led_blink_epwm_cpu01.obj" "Source\ADC.obj" "Source\ISR.obj" "Source\Stage0.obj" "Source\Stage1.obj" "Source\Stage2.obj" "Source\Stage3.obj" "Source\Test.obj" "Source\ePWM.obj" 
+	-$(RM) "F2837xS_Adc.d" "F2837xS_CpuTimers.d" "F2837xS_DefaultISR.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "timed_adc_soc_software_led_blink_epwm_cpu01.d" "Source\ADC.d" "Source\ISR.d" "Source\Stage0.d" "Source\Stage1.d" "Source\Stage2.d" "Source\Stage3.d" "Source\Test.d" "Source\ePWM.d" 
 	-$(RM) "F2837xS_CodeStartBranch.d" "F2837xS_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

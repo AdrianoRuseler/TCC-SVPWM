@@ -11,15 +11,15 @@
 #define PIX1        (float)3.1415926535897932384626433832795
 #define PIX2        (float)3.1415926535897932384626433832795*2
 #define PIDiv2      (float)(3.1415926535897932384626433832795/2)
-//#define cte1      (float) 0.577350269189626   // sqrt(3)/3
-//#define cte2      (float) 1.154700538379251   // 2*sqrt(3)/3
-//#define sqrt3     (float) 1.732050807568877   // sqrt(3)
-//#define cte3      (float) 0.866025403784439   // sqrt(3)/2
+#define cte1      (float) 0.577350269189626   // sqrt(3)/3
+#define cte2      (float) 1.154700538379251   // 2*sqrt(3)/3
+#define sqrt3     (float) 1.732050807568877   // sqrt(3)
+#define cte3      (float) 0.866025403784439   // sqrt(3)/2
 
-#define cte1        (float) sqrt(3)/3   // sqrt(3)/3
-#define cte2        (float) 2*sqrt(3)/3 // 2*sqrt(3)/3
-#define sqrt3       (float) sqrt(3)     // sqrt(3)
-#define cte3        (float) sqrt(3)/2   // sqrt(3)/2
+//#define cte1        (float) sqrt(3)/3   // sqrt(3)/3
+//#define cte2        (float) 2*sqrt(3)/3 // 2*sqrt(3)/3
+//#define sqrt3       (float) sqrt(3)     // sqrt(3)
+//#define cte3        (float) sqrt(3)/2   // sqrt(3)/2
 
 
 #define B0_PLL  61.8034088702226

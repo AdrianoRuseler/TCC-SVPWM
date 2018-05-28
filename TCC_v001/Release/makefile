@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS
+CG_TOOL_ROOT := C:/ti/ti-cgt-c2000_18.1.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -24,8 +24,6 @@ ORDERED_OBJS += \
 "./F2837xS_usDelay.obj" \
 "./configuration.obj" \
 "./utility Src Files/DLOG_4CH_F.obj" \
-"../2837xS_Generic_FLASH_lnk.cmd" \
-"../F2837xS_Headers_nonBIOS.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
 
@@ -149,21 +147,21 @@ BIN_OUTPUTS__QUOTED += \
 
 
 # All Target
-all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+all: $(OBJS) $(GEN_CMDS)
 	@$(MAKE) --no-print-directory -Onone "TCC_v001.out"
 
 # Tool invocations
-TCC_v001.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+TCC_v001.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O2 --diag_warning=225 --diag_wrap=off --display_error_number -z -m"TCC_v001.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TCC_v001_linkInfo.xml" --rom_model -o "TCC_v001.out" $(ORDERED_OBJS)
+	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O2 --diag_warning=225 --diag_wrap=off --display_error_number -z -m"TCC_v001.map" --stack_size=0x200 --warn_sections -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TCC_v001_linkInfo.xml" --rom_model -o "TCC_v001.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 TCC_v001.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/hex2000"  -o "TCC_v001.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/hex2000"  -o "TCC_v001.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

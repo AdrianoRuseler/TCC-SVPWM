@@ -17,14 +17,10 @@ extern struct TRIGONOMETRICO trig;
 extern struct PLL pll;
 extern struct PI Cvz,CizID,CizIQ;
 
-extern void test_run(void);
-extern void test_report(void);
 
 void stage0(void){
 
-    test_run();// Testa senos e cossenos
     ctrl.STATE =2; // Modo inversor
-    asm ("          NOP"); // Para fins de teste
     return;
 }
 

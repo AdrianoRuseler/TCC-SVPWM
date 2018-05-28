@@ -60,6 +60,13 @@ void SetupADCSoftware(void)
         acqps = 63; //320ns
     }
 
+    //  AD_A0 -> ia
+    //  AD_B0 -> ic
+    //  AD_A1 -> vab
+    //  AD_B1 -> vcb
+    //  AD_A2 -> vccP
+    //  AD_B2 -> vccN
+
     //
     //Select the channels to convert and end of conversion flag
     //ADCA
@@ -71,6 +78,9 @@ void SetupADCSoftware(void)
     AdcaRegs.ADCSOC1CTL.bit.CHSEL = 3;  //SOC1 will convert pin A3
     AdcaRegs.ADCSOC1CTL.bit.ACQPS = acqps; //sample window is acqps +
                                            //1 SYSCLK cycles
+    AdcaRegs.ADCSOC2CTL.bit.CHSEL = 4;  //SOC1 will convert pin A?
+    AdcaRegs.ADCSOC2CTL.bit.ACQPS = acqps; //sample window is acqps +
+                                           //1 SYSCLK cycles
     AdcaRegs.ADCINTSEL1N2.bit.INT1SEL = 1; //end of SOC1 will set INT1 flag
     AdcaRegs.ADCINTSEL1N2.bit.INT1E = 1;   //enable INT1 flag
     AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1; //make sure INT1 flag is cleared
@@ -80,6 +90,9 @@ void SetupADCSoftware(void)
                                            //1 SYSCLK cycles
     AdcbRegs.ADCSOC1CTL.bit.CHSEL = 3;  //SOC1 will convert pin B3
     AdcbRegs.ADCSOC1CTL.bit.ACQPS = acqps; //sample window is acqps +
+                                           //1 SYSCLK cycles
+    AdcbRegs.ADCSOC2CTL.bit.CHSEL = 4;  //SOC1 will convert pin B?
+    AdcbRegs.ADCSOC2CTL.bit.ACQPS = acqps; //sample window is acqps +
                                            //1 SYSCLK cycles
     AdcbRegs.ADCINTSEL1N2.bit.INT1SEL = 1; //end of SOC1 will set INT1 flag
     AdcbRegs.ADCINTSEL1N2.bit.INT1E = 1;   //enable INT1 flag

@@ -85,14 +85,6 @@ EPWM_INFO epwm1_info;
 EPWM_INFO epwm2_info;
 EPWM_INFO epwm3_info;
 
-//
-// Globals
-//
-Uint16 AdcaResult0;
-Uint16 AdcaResult1;
-Uint16 AdcbResult0;
-Uint16 AdcbResult1;
-
 
 void main(void)
 {
@@ -216,7 +208,7 @@ void main(void)
 //
 // Enable CPU INT3 which is connected to EPWM1-3 INT:
 //
-       IER |= M_INT3;
+   IER |= M_INT3;
 
 //
 // Enable TINT0 in the PIE: Group 1 __interrupt 7
@@ -266,12 +258,12 @@ __interrupt void cpu_timer0_isr(void)
     //convert, wait for completion, and store results
     //start conversions immediately via software, ADCA
     //
-    AdcaRegs.ADCSOCFRC1.all = 0x0003; //SOC0 and SOC1
+    AdcaRegs.ADCSOCFRC1.all = 0x0007; //SOC0, SOC1 and SOC2
 
     //
     //start conversions immediately via software, ADCB
     //
-    AdcbRegs.ADCSOCFRC1.all = 0x0003; //SOC0 and SOC1
+    AdcbRegs.ADCSOCFRC1.all = 0x0007; //SOC0, SOC1 and SOC2
 
     //
     //wait for ADCA to complete, then acknowledge flag
@@ -285,16 +277,23 @@ __interrupt void cpu_timer0_isr(void)
     while(AdcbRegs.ADCINTFLG.bit.ADCINT1 == 0);
     AdcbRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;
 
-    //store results
-    AdcaResult0 = AdcaResultRegs.ADCRESULT0;
-    AdcaResult1 = AdcaResultRegs.ADCRESULT1;
-    AdcbResult0 = AdcbResultRegs.ADCRESULT0;
-    AdcbResult1 = AdcbResultRegs.ADCRESULT1;
 
-    //
-    //at this point, conversion results are stored in
-    //AdcaResult0, AdcaResult1, AdcbResult0, and AdcbResult1
-    //
+    //  ADCA0 -> ia
+    //  ADCB0 -> ic
+    //  ADCA1 -> vab
+    //  ADCB1 -> vcb
+    //  ADCA2 -> vccP
+    //  ADCB2 -> vccN
+
+    //store results
+    conv.ADCA0 = AdcaResultRegs.ADCRESULT0;
+    conv.ADCA1 = AdcaResultRegs.ADCRESULT1;
+    conv.ADCA2 = AdcaResultRegs.ADCRESULT2; // Precisa ser configurado
+
+    conv.ADCB0 = AdcbResultRegs.ADCRESULT0;
+    conv.ADCB1 = AdcbResultRegs.ADCRESULT1;
+    conv.ADCB2 = AdcbResultRegs.ADCRESULT2; // Precisa ser configurado
+
 
     // Maquina de estados
     switch(ctrl.STATE){

@@ -20,6 +20,8 @@ extern struct PI Cvz,CizID,CizIQ;
 
 void stage0(void){
 
+
+
     ctrl.STATE =2; // Modo inversor
     return;
 }

@@ -12,6 +12,13 @@
 // Estrutura das variáveis do conversor
 //-----------------------------------------------------------------------------/
 
+    //  ADCA0 -> ia
+    //  ADCB0 -> ic
+    //  ADCA1 -> vab
+    //  ADCB1 -> vcb
+    //  ADCA2 -> vccP
+    //  ADCB2 -> vccN
+
 struct RETIFICADOR
 {
 float vdc;
@@ -33,9 +40,14 @@ float dq;               // razão cíclica eixo quadratura
 float VccRef;           // tensão de referência CC
 float idref;            // Corrente de referência de eixo direto
 float iqref;            // Corrente de referência de eixo direto
-float mav;
-float mbv;
-float mcv;
+Uint16 ADCA0;
+Uint16 ADCA1;
+Uint16 ADCA2;
+Uint16 ADCB0;
+Uint16 ADCB1;
+Uint16 ADCB2;
+// float mbv;
+// float mcv;
 };
 
 
@@ -53,8 +65,8 @@ char ENABLE;
 char STATE;
 int AD_EOC;
 char PWM;
-float TIME;
-double t;
+// float TIME;
+// double t;
 };
 
 

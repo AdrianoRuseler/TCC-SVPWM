@@ -39,6 +39,8 @@ void stage2(void){
     conv.da = trig.senoA*conv.dd + trig.coseA*conv.dq;
     conv.db = -(cte3*trig.coseA + trig.senoA*0.5)*conv.dd + (-trig.coseA*0.5 + cte3*trig.senoA)*conv.dq;
     conv.dc = (cte3*trig.coseA - trig.senoA*0.5)*conv.dd - (trig.coseA*0.5 + cte3*trig.senoA)*conv.dq;
+
+
     return;
 }
 

@@ -1,8 +1,6 @@
 /*
  * ADC.h
  *
- *  Created on: 28 de mai de 2018
- *      Author: adria
  */
 
 #ifndef HEADER_ADC_H_

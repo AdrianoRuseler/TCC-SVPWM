@@ -46,8 +46,9 @@ Uint16 ADCA2;
 Uint16 ADCB0;
 Uint16 ADCB1;
 Uint16 ADCB2;
-// float mbv;
-// float mcv;
+Uint16 CMPFA; // Valor de comparação do PWM da fase A
+Uint16 CMPFB; // Valor de comparação do PWM da fase B
+Uint16 CMPFC; // Valor de comparação do PWM da fase C
 };
 
 

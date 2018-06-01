@@ -54,6 +54,7 @@ void ConfigureADC(void);
 void SetupADCSoftware(void);
 
 void InitEPwmGpio(void);
+void InitEPwm(void);
 void InitEPwm1Example(void);
 void InitEPwm2Example(void);
 void InitEPwm3Example(void);
@@ -69,7 +70,7 @@ extern void stage2(void);
 extern void stage3(void);
 
 void sincosf(float x, float *sinx, float *cosx);
-
+void MODULATION(struct RETIFICADOR *conv);
 
 struct RETIFICADOR conv;
 struct CONTROLE ctrl;
@@ -148,9 +149,9 @@ void main(void)
 //
    EALLOW;  // This is needed to write to EALLOW protected registers
    PieVectTable.TIMER0_INT = &cpu_timer0_isr;
-   PieVectTable.EPWM1_INT = &epwm1_isr;
-   PieVectTable.EPWM2_INT = &epwm2_isr;
-   PieVectTable.EPWM3_INT = &epwm3_isr;
+//   PieVectTable.EPWM1_INT = &epwm1_isr;
+//   PieVectTable.EPWM2_INT = &epwm2_isr;
+ //  PieVectTable.EPWM3_INT = &epwm3_isr;
    EDIS;    // This is needed to disable write to EALLOW protected registers
 
 //
@@ -191,10 +192,10 @@ void main(void)
    EALLOW;
    CpuSysRegs.PCLKCR0.bit.TBCLKSYNC = 0;
    EDIS;
-
-   InitEPwm1Example();
-   InitEPwm2Example();
-   InitEPwm3Example();
+   InitEPwm();
+ //  InitEPwm1Example();
+ //  InitEPwm2Example();
+ //  InitEPwm3Example();
 
    EALLOW;
    CpuSysRegs.PCLKCR0.bit.TBCLKSYNC = 1;
@@ -314,6 +315,19 @@ __interrupt void cpu_timer0_isr(void)
     }
 
 
+    MODULATION(&conv);
+
+    if((conv.da+conv.d0)<0)conv.da=0;
+    if((conv.db+conv.d0)<0)conv.db=0;
+    if((conv.dc+conv.d0)<0)conv.dc=0;
+
+     //-------------------------------------------------------//
+     // Atualização das razões cíclicas - Conversor
+     //-------------------------------------------------------//
+
+    EPwm6Regs.CMPA.bit.CMPA=(unsigned int) ((conv.da+conv.d0)*TIMER_PWM);
+    EPwm4Regs.CMPA.bit.CMPA=(unsigned int) ((conv.db+conv.d0)*TIMER_PWM);
+    EPwm2Regs.CMPA.bit.CMPA=(unsigned int) ((conv.dc+conv.d0)*TIMER_PWM);
 
 
    //

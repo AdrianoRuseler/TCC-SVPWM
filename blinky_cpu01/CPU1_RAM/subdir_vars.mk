@@ -14,24 +14,31 @@ C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_Cod
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_usDelay.asm 
 
 C_SRCS += \
+../CLARKE_F.c \
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_DefaultISR.c \
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/source/F2837xS_GlobalVariableDefs.c \
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_Gpio.c \
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_PieCtrl.c \
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_PieVect.c \
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_SysCtrl.c \
-C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_examples_Cpu1/blinky/cpu01/blinky_cpu01.c 
+../PARK_F.c \
+C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_examples_Cpu1/blinky/cpu01/blinky_cpu01.c \
+../iPARK_F.c 
 
 C_DEPS += \
+./CLARKE_F.d \
 ./F2837xS_DefaultISR.d \
 ./F2837xS_GlobalVariableDefs.d \
 ./F2837xS_Gpio.d \
 ./F2837xS_PieCtrl.d \
 ./F2837xS_PieVect.d \
 ./F2837xS_SysCtrl.d \
-./blinky_cpu01.d 
+./PARK_F.d \
+./blinky_cpu01.d \
+./iPARK_F.d 
 
 OBJS += \
+./CLARKE_F.obj \
 ./F2837xS_CodeStartBranch.obj \
 ./F2837xS_DefaultISR.obj \
 ./F2837xS_GlobalVariableDefs.obj \
@@ -40,13 +47,16 @@ OBJS += \
 ./F2837xS_PieVect.obj \
 ./F2837xS_SysCtrl.obj \
 ./F2837xS_usDelay.obj \
-./blinky_cpu01.obj 
+./PARK_F.obj \
+./blinky_cpu01.obj \
+./iPARK_F.obj 
 
 ASM_DEPS += \
 ./F2837xS_CodeStartBranch.d \
 ./F2837xS_usDelay.d 
 
 OBJS__QUOTED += \
+"CLARKE_F.obj" \
 "F2837xS_CodeStartBranch.obj" \
 "F2837xS_DefaultISR.obj" \
 "F2837xS_GlobalVariableDefs.obj" \
@@ -55,32 +65,40 @@ OBJS__QUOTED += \
 "F2837xS_PieVect.obj" \
 "F2837xS_SysCtrl.obj" \
 "F2837xS_usDelay.obj" \
-"blinky_cpu01.obj" 
+"PARK_F.obj" \
+"blinky_cpu01.obj" \
+"iPARK_F.obj" 
 
 C_DEPS__QUOTED += \
+"CLARKE_F.d" \
 "F2837xS_DefaultISR.d" \
 "F2837xS_GlobalVariableDefs.d" \
 "F2837xS_Gpio.d" \
 "F2837xS_PieCtrl.d" \
 "F2837xS_PieVect.d" \
 "F2837xS_SysCtrl.d" \
-"blinky_cpu01.d" 
+"PARK_F.d" \
+"blinky_cpu01.d" \
+"iPARK_F.d" 
 
 ASM_DEPS__QUOTED += \
 "F2837xS_CodeStartBranch.d" \
 "F2837xS_usDelay.d" 
 
-ASM_SRCS__QUOTED += \
-"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_CodeStartBranch.asm" \
-"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_usDelay.asm" 
-
 C_SRCS__QUOTED += \
+"../CLARKE_F.c" \
 "C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_DefaultISR.c" \
 "C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/source/F2837xS_GlobalVariableDefs.c" \
 "C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_Gpio.c" \
 "C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_PieCtrl.c" \
 "C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_PieVect.c" \
 "C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_SysCtrl.c" \
-"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_examples_Cpu1/blinky/cpu01/blinky_cpu01.c" 
+"../PARK_F.c" \
+"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_examples_Cpu1/blinky/cpu01/blinky_cpu01.c" \
+"../iPARK_F.c" 
+
+ASM_SRCS__QUOTED += \
+"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_CodeStartBranch.asm" \
+"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/source/F2837xS_usDelay.asm" 
 
 

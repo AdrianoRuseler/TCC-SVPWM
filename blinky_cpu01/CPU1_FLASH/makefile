@@ -4,12 +4,13 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/c2000
+CG_TOOL_ROOT := C:/ti/ti-cgt-c2000_18.1.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./CLARKE_F.obj" \
 "./F2837xS_CodeStartBranch.obj" \
 "./F2837xS_DefaultISR.obj" \
 "./F2837xS_GlobalVariableDefs.obj" \
@@ -18,10 +19,11 @@ ORDERED_OBJS += \
 "./F2837xS_PieVect.obj" \
 "./F2837xS_SysCtrl.obj" \
 "./F2837xS_usDelay.obj" \
+"./PARK_F.obj" \
 "./blinky_cpu01.obj" \
+"./configuration.obj" \
+"./iPARK_F.obj" \
 "./utility Src Files/DLOG_4CH_F.obj" \
-"../2837xS_FLASH_SGEN_lnk_cpu1.cmd" \
-"../2837xS_RAM_SGEN_lnk_cpu1.cmd" \
 "../F2837xS_Headers_nonBIOS.cmd" \
 $(GEN_CMDS__FLAG) \
 -lrts2800_fpu32.lib \
@@ -149,15 +151,15 @@ all: blinky_cpu01.out
 blinky_cpu01.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/c2000/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 -g --define=CPU1 --define=_FLASH --display_error_number --diag_suppress=10063 --diag_warning=225 -z -m"blinky_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/c2000/lib" -i"C:/ti/c2000/include" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/cmd" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/cmd" --reread_libs --display_error_number --xml_link_info="blinky_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "blinky_cpu01.out" $(ORDERED_OBJS)
+	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --vcu_support=vcu2 --tmu_support=tmu0 --cla_support=cla1 --float_support=fpu32 -g --define=CPU1 --define=_FLASH --display_error_number --diag_suppress=10063 --diag_warning=225 -z -m"blinky_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/include" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/cmd" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/cmd" --reread_libs --display_error_number --xml_link_info="blinky_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "blinky_cpu01.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "blinky_cpu01.obj" "utility Src Files\DLOG_4CH_F.obj" 
-	-$(RM) "F2837xS_DefaultISR.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "blinky_cpu01.d" "utility Src Files\DLOG_4CH_F.d" 
+	-$(RM) "CLARKE_F.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "PARK_F.obj" "blinky_cpu01.obj" "configuration.obj" "iPARK_F.obj" "utility Src Files\DLOG_4CH_F.obj" 
+	-$(RM) "CLARKE_F.d" "F2837xS_DefaultISR.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "PARK_F.d" "blinky_cpu01.d" "configuration.d" "iPARK_F.d" "utility Src Files\DLOG_4CH_F.d" 
 	-$(RM) "F2837xS_CodeStartBranch.d" "F2837xS_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

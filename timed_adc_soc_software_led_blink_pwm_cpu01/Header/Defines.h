@@ -50,7 +50,7 @@
 
 
 // TODO: Verificar estes valores
-#define FCLK        150000000L
+#define FCLK        200000000L
 #define FS_CONV      19980L
 #define TIMER_PWM   (unsigned int)(FCLK/(2*FS_CONV))
 

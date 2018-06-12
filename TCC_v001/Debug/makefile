@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ti-cgt-c2000_18.1.1.LTS
+CG_TOOL_ROOT := C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -155,14 +155,14 @@ all: $(OBJS) $(GEN_CMDS)
 TCC_v001.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --vcu_support=vcu2 --tmu_support=tmu0 --cla_support=cla0 -O1 --opt_for_speed=5 --fp_mode=relaxed --advice:performance=all -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"TCC_v001.map" --warn_sections -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/controlSUITE/libs/dsp/SGEN/v101/lib" -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/include" --reread_libs --display_error_number --diag_wrap=off --xml_link_info="TCC_v001_linkInfo.xml" --rom_model -o "TCC_v001.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --vcu_support=vcu2 --tmu_support=tmu0 --cla_support=cla0 -O1 --opt_for_speed=5 --fp_mode=relaxed --advice:performance=all -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"TCC_v001.map" --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/controlSUITE/libs/dsp/SGEN/v101/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/include" --reread_libs --display_error_number --diag_wrap=off --xml_link_info="TCC_v001_linkInfo.xml" --rom_model -o "TCC_v001.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 TCC_v001.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/hex2000"  -o "TCC_v001.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/hex2000"  -o "TCC_v001.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

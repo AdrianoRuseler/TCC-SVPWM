@@ -2,9 +2,9 @@
 
 CLARKE_F.obj: ../CLARKE_F.c
 CLARKE_F.obj: C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include/Solar_F.h
-CLARKE_F.obj: C:/ti/c2000/include/math.h
-CLARKE_F.obj: C:/ti/c2000/include/linkage.h
-CLARKE_F.obj: C:/ti/c2000/include/_defs.h
+CLARKE_F.obj: C:/ti/ti-cgt-c2000_15.12.7.LTS/include/math.h
+CLARKE_F.obj: C:/ti/ti-cgt-c2000_15.12.7.LTS/include/linkage.h
+CLARKE_F.obj: C:/ti/ti-cgt-c2000_15.12.7.LTS/include/_defs.h
 CLARKE_F.obj: C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include/ABC_DQ0_POS_F.h
 CLARKE_F.obj: C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include/ABC_DQ0_NEG_F.h
 CLARKE_F.obj: C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include/CLARKE_F.h
@@ -33,9 +33,9 @@ CLARKE_F.obj: C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include/SPLL_3PH
 
 ../CLARKE_F.c: 
 C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include/Solar_F.h: 
-C:/ti/c2000/include/math.h: 
-C:/ti/c2000/include/linkage.h: 
-C:/ti/c2000/include/_defs.h: 
+C:/ti/ti-cgt-c2000_15.12.7.LTS/include/math.h: 
+C:/ti/ti-cgt-c2000_15.12.7.LTS/include/linkage.h: 
+C:/ti/ti-cgt-c2000_15.12.7.LTS/include/_defs.h: 
 C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include/ABC_DQ0_POS_F.h: 
 C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include/ABC_DQ0_NEG_F.h: 
 C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include/CLARKE_F.h: 

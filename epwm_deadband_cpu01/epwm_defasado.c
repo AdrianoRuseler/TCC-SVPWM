@@ -391,7 +391,6 @@ void InitEPwm6Example()
     EPwm6Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
 
     // Setup compare
-    //EPwm6Regs.CMPA.bit.CMPA = 1302;
     EPwm6Regs.CMPA.bit.CMPA = 1302;
 
     //
@@ -409,8 +408,8 @@ void InitEPwm6Example()
     EPwm6Regs.DBCTL.bit.OUT_MODE = DB_FULL_ENABLE;
     EPwm6Regs.DBCTL.bit.POLSEL = DB_ACTV_LOC;
     EPwm6Regs.DBCTL.bit.IN_MODE = DBA_ALL;
-    EPwm6Regs.DBRED.bit.DBRED = 50; //EPWM6_MIN_DB;
-    EPwm6Regs.DBFED.bit.DBFED = 50; //EPWM6_MIN_DB;
+    EPwm6Regs.DBRED.bit.DBRED = 0; //EPWM6_MIN_DB;
+    EPwm6Regs.DBFED.bit.DBFED = 0; //EPWM6_MIN_DB;
     //EPwm6_DB_Direction = DB_UP;
 
     //
@@ -424,7 +423,7 @@ void InitEPwm6Example()
 void InitEPwm7Example()
 {
     EPwm7Regs.TBPRD = 2604;//81                 // Set timer period
-    EPwm7Regs.TBPHS.bit.TBPHS = 0;           // Phase
+    EPwm7Regs.TBPHS.bit.TBPHS = 5208/3;           // Phase
     EPwm7Regs.TBCTL.bit.PHSDIR = 0;
     EPwm7Regs.TBCTR = 0x0000;                     // Clear counter
 
@@ -445,7 +444,7 @@ void InitEPwm7Example()
     EPwm7Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
 
     // Setup compare
-    EPwm7Regs.CMPA.bit.CMPA = 651;
+    EPwm7Regs.CMPA.bit.CMPA = 1302;
 
     //
     // Set actions
@@ -462,8 +461,8 @@ void InitEPwm7Example()
     EPwm7Regs.DBCTL.bit.OUT_MODE = DB_FULL_ENABLE;
     EPwm7Regs.DBCTL.bit.POLSEL = DB_ACTV_LOC;
     EPwm7Regs.DBCTL.bit.IN_MODE = DBA_ALL;
-    EPwm7Regs.DBRED.bit.DBRED = 50; //EPWM6_MIN_DB;
-    EPwm7Regs.DBFED.bit.DBFED = 50; //EPWM6_MIN_DB;
+    EPwm7Regs.DBRED.bit.DBRED = 0; //EPWM6_MIN_DB;
+    EPwm7Regs.DBFED.bit.DBFED = 0; //EPWM6_MIN_DB;
     //EPwm6_DB_Direction = DB_UP;
 
     //
@@ -477,7 +476,7 @@ void InitEPwm7Example()
 void InitEPwm8Example()
 {
     EPwm8Regs.TBPRD = 2604;//81                 // Set timer period
-    EPwm8Regs.TBPHS.bit.TBPHS = 0;           // Phase
+    EPwm8Regs.TBPHS.bit.TBPHS = (2*5208)/3;           // Phase
     EPwm8Regs.TBCTL.bit.PHSDIR = 0;
     EPwm8Regs.TBCTR = 0x0000;                     // Clear counter
 
@@ -498,7 +497,7 @@ void InitEPwm8Example()
     EPwm8Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
 
     // Setup compare
-    EPwm8Regs.CMPA.bit.CMPA = 325;
+    EPwm8Regs.CMPA.bit.CMPA = 1302;
 
     //
     // Set actions
@@ -515,8 +514,8 @@ void InitEPwm8Example()
     EPwm8Regs.DBCTL.bit.OUT_MODE = DB_FULL_ENABLE;
     EPwm8Regs.DBCTL.bit.POLSEL = DB_ACTV_LOC;
     EPwm8Regs.DBCTL.bit.IN_MODE = DBA_ALL;
-    EPwm8Regs.DBRED.bit.DBRED = 50; //EPWM6_MIN_DB;
-    EPwm2Regs.DBFED.bit.DBFED = 50; //EPWM6_MIN_DB;
+    EPwm8Regs.DBRED.bit.DBRED = 0; //EPWM6_MIN_DB;
+    EPwm2Regs.DBFED.bit.DBFED = 0; //EPWM6_MIN_DB;
     //EPwm6_DB_Direction = DB_UP;
 
     //
@@ -547,6 +546,11 @@ void InitEPwmGpio_DB(void)
 //
 // End of file
 //
+
+
+
+
+
 
 
 

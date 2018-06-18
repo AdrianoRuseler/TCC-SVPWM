@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ti-cgt-c2000_18.1.1.LTS
+CG_TOOL_ROOT := C:/ti/c2000
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -151,7 +151,7 @@ all: blinky_cpu01.out
 blinky_cpu01.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --vcu_support=vcu2 --tmu_support=tmu0 --cla_support=cla1 --float_support=fpu32 -g --define=CPU1 --define=_FLASH --display_error_number --diag_suppress=10063 --diag_warning=225 -z -m"blinky_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/include" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/cmd" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/cmd" --reread_libs --display_error_number --xml_link_info="blinky_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "blinky_cpu01.out" $(ORDERED_OBJS)
+	"C:/ti/c2000/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 -g --define=CPU1 --define=_FLASH --display_error_number --diag_suppress=10063 --diag_warning=225 -z -m"blinky_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/c2000/lib" -i"C:/ti/c2000/include" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/cmd" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/cmd" --reread_libs --display_error_number --xml_link_info="blinky_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "blinky_cpu01.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 

@@ -4,13 +4,12 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti
+CG_TOOL_ROOT := C:/ti/c2000
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./F2837xS_Adc.obj" \
 "./F2837xS_CodeStartBranch.obj" \
 "./F2837xS_DefaultISR.obj" \
 "./F2837xS_EPwm.obj" \
@@ -20,15 +19,7 @@ ORDERED_OBJS += \
 "./F2837xS_PieVect.obj" \
 "./F2837xS_SysCtrl.obj" \
 "./F2837xS_usDelay.obj" \
-<<<<<<< HEAD
-<<<<<<< HEAD
-"./epwm_deadband_2.obj" \
-=======
-"./epwm_defasado.obj" \
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
-"./epwm_defasado.obj" \
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
+"./epwm_deadband.obj" \
 $(GEN_CMDS__FLAG) \
 -lrts2800_fpu32.lib \
 -l2837xS_Generic_RAM_lnk.cmd \
@@ -153,25 +144,15 @@ all: epwm_deadband_cpu01.out
 epwm_deadband_cpu01.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 -z -m"epwm_deadband_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/lib" -i"C:/ti/include" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/cmd" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/cmd" --reread_libs --display_error_number --xml_link_info="epwm_deadband_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "epwm_deadband_cpu01.out" $(ORDERED_OBJS)
+	"C:/ti/c2000/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 -z -m"epwm_deadband_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/c2000/lib" -i"C:/ti/c2000/include" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/cmd" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/cmd" --reread_libs --display_error_number --xml_link_info="epwm_deadband_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "epwm_deadband_cpu01.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-<<<<<<< HEAD
-<<<<<<< HEAD
-	-$(RM) "F2837xS_Adc.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "epwm_deadband_2.obj" 
-	-$(RM) "F2837xS_Adc.d" "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "epwm_deadband_2.d" 
-=======
-	-$(RM) "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "epwm_defasado.obj" 
-	-$(RM) "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "epwm_defasado.d" 
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
-	-$(RM) "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "epwm_defasado.obj" 
-	-$(RM) "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "epwm_defasado.d" 
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
+	-$(RM) "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "epwm_deadband.obj" 
+	-$(RM) "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "epwm_deadband.d" 
 	-$(RM) "F2837xS_CodeStartBranch.d" "F2837xS_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

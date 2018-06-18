@@ -143,7 +143,7 @@ EXE_OUTPUTS__QUOTED += \
 all: adc_soc_continuous_cpu01.out
 
 # Tool invocations
-adc_soc_continuous_cpu01.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+adc_soc_continuous_cpu01.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
 	"C:/ti/c2000/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 -O1 --opt_for_speed=5 --fp_mode=relaxed -g --define=CPU1 --display_error_number --diag_suppress=1311 --diag_warning=225 -z -m"adc_soc_continuous_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/c2000/lib" -i"C:/ti/c2000/include" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/cmd" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/cmd" --reread_libs --display_error_number --xml_link_info="adc_soc_continuous_cpu01_linkInfo.xml" --rom_model -o "adc_soc_continuous_cpu01.out" $(ORDERED_OBJS)

@@ -2,12 +2,12 @@
 
 F2837xS_GlobalVariableDefs.obj: C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/source/F2837xS_GlobalVariableDefs.c
 F2837xS_GlobalVariableDefs.obj: C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include/F2837xS_device.h
-F2837xS_GlobalVariableDefs.obj: C:/ti/ti-cgt-c2000_15.12.7.LTS/include/assert.h
-F2837xS_GlobalVariableDefs.obj: C:/ti/ti-cgt-c2000_15.12.7.LTS/include/linkage.h
-F2837xS_GlobalVariableDefs.obj: C:/ti/ti-cgt-c2000_15.12.7.LTS/include/stdarg.h
-F2837xS_GlobalVariableDefs.obj: C:/ti/ti-cgt-c2000_15.12.7.LTS/include/stdbool.h
-F2837xS_GlobalVariableDefs.obj: C:/ti/ti-cgt-c2000_15.12.7.LTS/include/stddef.h
-F2837xS_GlobalVariableDefs.obj: C:/ti/ti-cgt-c2000_15.12.7.LTS/include/stdint.h
+F2837xS_GlobalVariableDefs.obj: C:/ti/c2000/include/assert.h
+F2837xS_GlobalVariableDefs.obj: C:/ti/c2000/include/linkage.h
+F2837xS_GlobalVariableDefs.obj: C:/ti/c2000/include/stdarg.h
+F2837xS_GlobalVariableDefs.obj: C:/ti/c2000/include/stdbool.h
+F2837xS_GlobalVariableDefs.obj: C:/ti/c2000/include/stddef.h
+F2837xS_GlobalVariableDefs.obj: C:/ti/c2000/include/stdint.h
 F2837xS_GlobalVariableDefs.obj: C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include/F2837xS_adc.h
 F2837xS_GlobalVariableDefs.obj: C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include/F2837xS_analogsubsys.h
 F2837xS_GlobalVariableDefs.obj: C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include/F2837xS_cla.h
@@ -41,12 +41,12 @@ F2837xS_GlobalVariableDefs.obj: C:/ti/controlSUITE/device_support/F2837xS/v210/F
 
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/source/F2837xS_GlobalVariableDefs.c: 
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include/F2837xS_device.h: 
-C:/ti/ti-cgt-c2000_15.12.7.LTS/include/assert.h: 
-C:/ti/ti-cgt-c2000_15.12.7.LTS/include/linkage.h: 
-C:/ti/ti-cgt-c2000_15.12.7.LTS/include/stdarg.h: 
-C:/ti/ti-cgt-c2000_15.12.7.LTS/include/stdbool.h: 
-C:/ti/ti-cgt-c2000_15.12.7.LTS/include/stddef.h: 
-C:/ti/ti-cgt-c2000_15.12.7.LTS/include/stdint.h: 
+C:/ti/c2000/include/assert.h: 
+C:/ti/c2000/include/linkage.h: 
+C:/ti/c2000/include/stdarg.h: 
+C:/ti/c2000/include/stdbool.h: 
+C:/ti/c2000/include/stddef.h: 
+C:/ti/c2000/include/stdint.h: 
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include/F2837xS_adc.h: 
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include/F2837xS_analogsubsys.h: 
 C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include/F2837xS_cla.h: 

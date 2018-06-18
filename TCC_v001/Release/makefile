@@ -4,15 +4,7 @@
 
 SHELL = cmd.exe
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-CG_TOOL_ROOT := C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS
-=======
 CG_TOOL_ROOT := C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
-CG_TOOL_ROOT := C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -162,30 +154,14 @@ all: $(OBJS) $(GEN_CMDS)
 TCC_v001.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-<<<<<<< HEAD
-<<<<<<< HEAD
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O2 --diag_warning=225 --diag_wrap=off --display_error_number -z -m"TCC_v001.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TCC_v001_linkInfo.xml" --rom_model -o "TCC_v001.out" $(ORDERED_OBJS)
-=======
 	"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O2 --diag_warning=225 --diag_wrap=off --display_error_number -z -m"TCC_v001.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TCC_v001_linkInfo.xml" --rom_model -o "TCC_v001.out" $(ORDERED_OBJS)
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
-	"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O2 --diag_warning=225 --diag_wrap=off --display_error_number -z -m"TCC_v001.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TCC_v001_linkInfo.xml" --rom_model -o "TCC_v001.out" $(ORDERED_OBJS)
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 TCC_v001.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-<<<<<<< HEAD
-<<<<<<< HEAD
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/hex2000"  -o "TCC_v001.hex" $(EXE_OUTPUTS__QUOTED)
-=======
 	"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/hex2000"  -o "TCC_v001.hex" $(EXE_OUTPUTS__QUOTED)
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
-	"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/hex2000"  -o "TCC_v001.hex" $(EXE_OUTPUTS__QUOTED)
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

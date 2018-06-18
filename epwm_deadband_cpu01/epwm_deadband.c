@@ -259,17 +259,6 @@ __interrupt void epwm8_isr(void)
 
 void InitEPwm1Example()
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    //TPRD = T_PWM/(2*TBCLK) = f_CLK/(2*f_PWM) / Change System Clock at F2837xS.SysCtrl.c
-    // Check EPWMCLK register
-
-    EPwm6Regs.TBPRD = 5208/2; //6000;                       // Set timer period
-    EPwm6Regs.TBPHS.bit.TBPHS = 0x0000;           // Phase is 0
-    EPwm6Regs.TBCTR = 0x0000;                     // Clear counter
-=======
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
     EPwm1Regs.ETSEL.bit.SOCAEN  = 1;        // Enable SOC on A group
     EPwm1Regs.ETSEL.bit.SOCASEL = 1;        // Select SOC from from CPMA on upcount
     EPwm1Regs.ETPS.bit.SOCAPRD  = 1;        // Generate pulse on 1st event
@@ -277,25 +266,10 @@ void InitEPwm1Example()
     EPwm1Regs.TBPRD = 2604;//81                 // Set timer period
     EPwm1Regs.TBPHS.bit.TBPHS = 0;           // Phase is 0
     EPwm1Regs.TBCTR = 0x0000;                     // Clear counter
-<<<<<<< HEAD
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 
     //
     // Setup TBCLK
     //
-<<<<<<< HEAD
-<<<<<<< HEAD
-    EPwm6Regs.TBCTL.bit.CTRMODE = TB_COUNT_UPDOWN; // Count up
-    EPwm6Regs.TBCTL.bit.PHSEN = TB_DISABLE;        // Disable phase loading
-    EPwm6Regs.TBCTL.bit.HSPCLKDIV = TB_DIV1; //TB_DIV4;       // Clock ratio to SYSCLKOUT
-    EPwm6Regs.TBCTL.bit.CLKDIV = TB_DIV1;    //TB_DIV4;
-    //EPwm6Regs.TBCTL.bit.SYNCOSEL = TB_CTR_ZERO; //adicionado agora
-    //EPwm6Regs.TBCTL.bit.PRDLD = TB_IMMEDIATE;   //adicionado agora
-=======
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
     EPwm1Regs.TBCTL.bit.CTRMODE = TB_COUNT_UPDOWN; // Count up
     EPwm1Regs.TBCTL.bit.PHSEN = TB_DISABLE;        // Disable phase loading (Master)
     EPwm1Regs.TBCTL.bit.HSPCLKDIV = TB_DIV1; //TB_DIV4;       // Clock ratio to SYSCLKOUT
@@ -308,10 +282,6 @@ void InitEPwm1Example()
     EPwm1Regs.CMPCTL.bit.SHDWBMODE = CC_SHADOW;
     EPwm1Regs.CMPCTL.bit.LOADAMODE = CC_CTR_ZERO;
     EPwm1Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
-<<<<<<< HEAD
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 
     // Setup compare
     EPwm1Regs.CMPA.bit.CMPA = 1302;
@@ -391,12 +361,6 @@ void InitEPwm2Example()
     //
     // Interrupt where we will change the Deadband
     //
-<<<<<<< HEAD
-<<<<<<< HEAD
-    EPwm6Regs.CMPA.bit.CMPA = 5208/4; //3000;
-=======
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
     EPwm2Regs.ETSEL.bit.INTSEL = ET_CTR_ZERO;    // Select INT on Zero event
     EPwm2Regs.ETSEL.bit.INTEN = 1;               // Enable INT
     EPwm2Regs.ETPS.bit.INTPRD = ET_1ST; //ET_3RD;          // Generate INT on 3rd event
@@ -429,10 +393,6 @@ void InitEPwm6Example()
     // Setup compare
     //EPwm6Regs.CMPA.bit.CMPA = 1302;
     EPwm6Regs.CMPA.bit.CMPA = 1302;
-<<<<<<< HEAD
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 
     //
     // Set actions
@@ -463,35 +423,15 @@ void InitEPwm6Example()
 
 void InitEPwm7Example()
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    EPwm7Regs.TBPRD = 5208/2;                       // Set timer period
-    EPwm7Regs.TBPHS.bit.TBPHS = 0x0000;           // Phase is 0
-=======
     EPwm7Regs.TBPRD = 2604;//81                 // Set timer period
     EPwm7Regs.TBPHS.bit.TBPHS = 0;           // Phase
     EPwm7Regs.TBCTL.bit.PHSDIR = 0;
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
-    EPwm7Regs.TBPRD = 2604;//81                 // Set timer period
-    EPwm7Regs.TBPHS.bit.TBPHS = 0;           // Phase
-    EPwm7Regs.TBCTL.bit.PHSDIR = 0;
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
     EPwm7Regs.TBCTR = 0x0000;                     // Clear counter
 
     //
     // Setup TBCLK
     //
     EPwm7Regs.TBCTL.bit.CTRMODE = TB_COUNT_UPDOWN; // Count up
-<<<<<<< HEAD
-<<<<<<< HEAD
-    EPwm7Regs.TBCTL.bit.PHSEN = TB_DISABLE;        // Disable phase loading
-    EPwm7Regs.TBCTL.bit.HSPCLKDIV = TB_DIV1;       // Clock ratio to SYSCLKOUT
-    EPwm7Regs.TBCTL.bit.CLKDIV = TB_DIV1;          // Slow just to observe on
-                                                   // the scope
-=======
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
     EPwm7Regs.TBCTL.bit.PHSEN = TB_ENABLE;        // Enable phase loading (Slave)
     EPwm7Regs.TBCTL.bit.HSPCLKDIV = TB_DIV1; //TB_DIV4;       // Clock ratio to SYSCLKOUT
     EPwm7Regs.TBCTL.bit.CLKDIV = TB_DIV1;    //TB_DIV4;
@@ -503,21 +443,9 @@ void InitEPwm7Example()
     EPwm7Regs.CMPCTL.bit.SHDWBMODE = CC_SHADOW;
     EPwm7Regs.CMPCTL.bit.LOADAMODE = CC_CTR_ZERO;
     EPwm7Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
-<<<<<<< HEAD
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-
-    // Setup compare
-<<<<<<< HEAD
-    //
-    EPwm7Regs.CMPA.bit.CMPA = 5208/4;
-=======
-    EPwm7Regs.CMPA.bit.CMPA = 651;
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
 
     // Setup compare
     EPwm7Regs.CMPA.bit.CMPA = 651;
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 
     //
     // Set actions
@@ -548,36 +476,15 @@ void InitEPwm7Example()
 
 void InitEPwm8Example()
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    EPwm8Regs.TBPRD = 5208/2;                        // Set timer period
-    EPwm8Regs.TBPHS.bit.TBPHS = 0x0000;            // Phase is 0
-    EPwm8Regs.TBCTR = 0x0000;                      // Clear counter
-=======
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
     EPwm8Regs.TBPRD = 2604;//81                 // Set timer period
     EPwm8Regs.TBPHS.bit.TBPHS = 0;           // Phase
     EPwm8Regs.TBCTL.bit.PHSDIR = 0;
     EPwm8Regs.TBCTR = 0x0000;                     // Clear counter
-<<<<<<< HEAD
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 
     //
     // Setup TBCLK
     //
     EPwm8Regs.TBCTL.bit.CTRMODE = TB_COUNT_UPDOWN; // Count up
-<<<<<<< HEAD
-<<<<<<< HEAD
-    EPwm8Regs.TBCTL.bit.PHSEN = TB_DISABLE;        // Disable phase loading
-    EPwm8Regs.TBCTL.bit.HSPCLKDIV = TB_DIV1;       // Clock ratio to SYSCLKOUT
-    EPwm8Regs.TBCTL.bit.CLKDIV = TB_DIV1;          // Slow so we can observe on
-                                                   // the scope
-=======
-=======
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
     EPwm8Regs.TBCTL.bit.PHSEN = TB_ENABLE;        // Enable phase loading (Slave)
     EPwm8Regs.TBCTL.bit.HSPCLKDIV = TB_DIV1; //TB_DIV4;       // Clock ratio to SYSCLKOUT
     EPwm8Regs.TBCTL.bit.CLKDIV = TB_DIV1;    //TB_DIV4;
@@ -589,21 +496,9 @@ void InitEPwm8Example()
     EPwm8Regs.CMPCTL.bit.SHDWBMODE = CC_SHADOW;
     EPwm8Regs.CMPCTL.bit.LOADAMODE = CC_CTR_ZERO;
     EPwm8Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
-<<<<<<< HEAD
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-
-    // Setup compare
-<<<<<<< HEAD
-    //
-    EPwm8Regs.CMPA.bit.CMPA = 5208/4;
-=======
-    EPwm8Regs.CMPA.bit.CMPA = 325;
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
-=======
 
     // Setup compare
     EPwm8Regs.CMPA.bit.CMPA = 325;
->>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 
     //
     // Set actions

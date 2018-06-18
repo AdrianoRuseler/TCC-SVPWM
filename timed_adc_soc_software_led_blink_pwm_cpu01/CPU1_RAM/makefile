@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS
+CG_TOOL_ROOT := C:/ti/ti-cgt-c2000_18.1.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -161,14 +161,14 @@ all: timed_adc_soc_software_led_blink_epwm_cpu01.out
 timed_adc_soc_software_led_blink_epwm_cpu01.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --fp_mode=relaxed --define=CPU1 -g --diag_suppress=10063 --diag_warning=225 --display_error_number -z -m"timed_adc_soc_software_led_blink_epwm_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS/include" -i"C:/ti/c2000/C2000Ware_1_00_04_00/device_support/f2837xs/common/cmd" -i"C:/ti/c2000/C2000Ware_1_00_04_00/device_support/f2837xs/headers/cmd" --reread_libs --display_error_number --xml_link_info="timed_adc_soc_software_led_blink_epwm_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "timed_adc_soc_software_led_blink_epwm_cpu01.out" $(ORDERED_OBJS)
+	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --fp_mode=relaxed --define=CPU1 -g --diag_suppress=10063 --diag_warning=225 --display_error_number -z -m"timed_adc_soc_software_led_blink_epwm_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/lib" -i"C:/ti/ti-cgt-c2000_18.1.1.LTS/include" -i"C:/ti/c2000/C2000Ware_1_00_04_00/device_support/f2837xs/common/cmd" -i"C:/ti/c2000/C2000Ware_1_00_04_00/device_support/f2837xs/headers/cmd" --reread_libs --display_error_number --xml_link_info="timed_adc_soc_software_led_blink_epwm_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "timed_adc_soc_software_led_blink_epwm_cpu01.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 timed_adc_soc_software_led_blink_epwm_cpu01.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_18.1.1.LTS/bin/hex2000"  -o "timed_adc_soc_software_led_blink_epwm_cpu01.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ti-cgt-c2000_18.1.1.LTS/bin/hex2000"  -o "timed_adc_soc_software_led_blink_epwm_cpu01.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

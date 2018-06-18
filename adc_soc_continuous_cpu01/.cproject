@@ -91,7 +91,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="config.c|adc_soc.c|2837xS_Generic_FLASH_lnk.cmd|F2837xS_Headers_nonBIOS.cmd|2837xS_Generic_RAM_lnk.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="adc_soc_2.c|adc_soc_continuous_cpu01.c|config.c|adc_soc.c|2837xS_Generic_FLASH_lnk.cmd|F2837xS_Headers_nonBIOS.cmd|2837xS_Generic_RAM_lnk.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

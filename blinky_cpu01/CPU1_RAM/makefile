@@ -11,8 +11,10 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./CLARKE_F.obj" \
+"./F2837xS_Adc.obj" \
 "./F2837xS_CodeStartBranch.obj" \
 "./F2837xS_DefaultISR.obj" \
+"./F2837xS_EPwm.obj" \
 "./F2837xS_GlobalVariableDefs.obj" \
 "./F2837xS_Gpio.obj" \
 "./F2837xS_PieCtrl.obj" \
@@ -20,7 +22,8 @@ ORDERED_OBJS += \
 "./F2837xS_SysCtrl.obj" \
 "./F2837xS_usDelay.obj" \
 "./PARK_F.obj" \
-"./blinky_cpu01.obj" \
+"./blinky_cpu01_main.obj" \
+"./configuration_ADC_ePWM.obj" \
 "./iPARK_F.obj" \
 "./utility Src Files/DLOG_4CH_F.obj" \
 "../2837xS_FLASH_SGEN_lnk_cpu1.cmd" \
@@ -170,8 +173,8 @@ blinky_cpu01.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "CLARKE_F.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "PARK_F.obj" "blinky_cpu01.obj" "iPARK_F.obj" "utility Src Files\DLOG_4CH_F.obj" 
-	-$(RM) "CLARKE_F.d" "F2837xS_DefaultISR.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "PARK_F.d" "blinky_cpu01.d" "iPARK_F.d" "utility Src Files\DLOG_4CH_F.d" 
+	-$(RM) "CLARKE_F.obj" "F2837xS_Adc.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "PARK_F.obj" "blinky_cpu01_main.obj" "configuration_ADC_ePWM.obj" "iPARK_F.obj" "utility Src Files\DLOG_4CH_F.obj" 
+	-$(RM) "CLARKE_F.d" "F2837xS_Adc.d" "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "PARK_F.d" "blinky_cpu01_main.d" "configuration_ADC_ePWM.d" "iPARK_F.d" "utility Src Files\DLOG_4CH_F.d" 
 	-$(RM) "F2837xS_CodeStartBranch.d" "F2837xS_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

@@ -10,6 +10,7 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./F2837xS_Adc.obj" \
 "./F2837xS_CodeStartBranch.obj" \
 "./F2837xS_DefaultISR.obj" \
 "./F2837xS_EPwm.obj" \
@@ -19,7 +20,15 @@ ORDERED_OBJS += \
 "./F2837xS_PieVect.obj" \
 "./F2837xS_SysCtrl.obj" \
 "./F2837xS_usDelay.obj" \
+<<<<<<< HEAD
+<<<<<<< HEAD
+"./epwm_deadband_2.obj" \
+=======
 "./epwm_defasado.obj" \
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
+=======
+"./epwm_defasado.obj" \
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 $(GEN_CMDS__FLAG) \
 -lrts2800_fpu32.lib \
 -l2837xS_Generic_RAM_lnk.cmd \
@@ -151,8 +160,18 @@ epwm_deadband_cpu01.out: $(OBJS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
+<<<<<<< HEAD
+<<<<<<< HEAD
+	-$(RM) "F2837xS_Adc.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "epwm_deadband_2.obj" 
+	-$(RM) "F2837xS_Adc.d" "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "epwm_deadband_2.d" 
+=======
 	-$(RM) "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "epwm_defasado.obj" 
 	-$(RM) "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "epwm_defasado.d" 
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
+=======
+	-$(RM) "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "epwm_defasado.obj" 
+	-$(RM) "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "epwm_defasado.d" 
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 	-$(RM) "F2837xS_CodeStartBranch.d" "F2837xS_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

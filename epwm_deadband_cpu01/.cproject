@@ -86,7 +86,15 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+<<<<<<< HEAD
+<<<<<<< HEAD
+						<entry excluding="epwm_deadband.c|epwm_deadband_cpu01.c|config.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+=======
 						<entry excluding="epwm_deadband.c|epwm_deadband2.c|epwm_deadband_cpu01.c|config.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
+=======
+						<entry excluding="epwm_deadband.c|epwm_deadband2.c|epwm_deadband_cpu01.c|config.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 					</sourceEntries>
 				</configuration>
 			</storageModule>

@@ -12,6 +12,7 @@ GEN_CMDS__FLAG :=
 ORDERED_OBJS += \
 "./F2837xS_Adc.obj" \
 "./F2837xS_CodeStartBranch.obj" \
+"./F2837xS_CpuTimers.obj" \
 "./F2837xS_DefaultISR.obj" \
 "./F2837xS_GlobalVariableDefs.obj" \
 "./F2837xS_Gpio.obj" \
@@ -19,7 +20,7 @@ ORDERED_OBJS += \
 "./F2837xS_PieVect.obj" \
 "./F2837xS_SysCtrl.obj" \
 "./F2837xS_usDelay.obj" \
-"./adc_soc_continuous_cpu01.obj" \
+"./adc_soc_3.obj" \
 $(GEN_CMDS__FLAG) \
 -lrts2800_fpu32.lib \
 -l"C:/ti/controlSUITE/libs/math/IQmath/v160/lib/IQmath_fpu32.lib" \
@@ -152,8 +153,8 @@ adc_soc_continuous_cpu01.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "F2837xS_Adc.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_DefaultISR.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "adc_soc_continuous_cpu01.obj" 
-	-$(RM) "F2837xS_Adc.d" "F2837xS_DefaultISR.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "adc_soc_continuous_cpu01.d" 
+	-$(RM) "F2837xS_Adc.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_CpuTimers.obj" "F2837xS_DefaultISR.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "adc_soc_3.obj" 
+	-$(RM) "F2837xS_Adc.d" "F2837xS_CpuTimers.d" "F2837xS_DefaultISR.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "adc_soc_3.d" 
 	-$(RM) "F2837xS_CodeStartBranch.d" "F2837xS_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

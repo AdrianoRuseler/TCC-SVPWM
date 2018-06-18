@@ -58,4 +58,6 @@ dkms.conf
 
 # Folders
 Workspace
+timed_adc_soc_software_led_blink_pwm_cpu01
+
 

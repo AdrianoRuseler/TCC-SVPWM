@@ -9,6 +9,16 @@ CLARKE_F.obj: ../CLARKE_F.c $(GEN_OPTS) | $(GEN_HDRS)
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: C2000 Compiler'
 	"C:/ti/ti-cgt-c2000_15.12.7.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 --fp_mode=relaxed --include_path="C:/ti/ti-cgt-c2000_15.12.7.LTS/include" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/CLA_v1.0" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/source" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include" --include_path="C:/Users/ESPM/Documents/workspace_cc7/blinky_cpu01/utility Src Files" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/v4.3" --include_path="C:/ti/controlSUITE/libs/math/IQmath/v160/include" --include_path="C:/ti/controlSUITE/libs/dsp/SGEN/v101/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/include" -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 --preproc_with_compile --preproc_dependency="CLARKE_F.d_raw" $(GEN_OPTS__FLAG) "$<"
+<<<<<<< HEAD
+	@echo 'Finished building: "$<"'
+	@echo ' '
+
+F2837xS_Adc.obj: ../F2837xS_Adc.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: "$<"'
+	@echo 'Invoking: C2000 Compiler'
+	"C:/ti/c2000/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 --fp_mode=relaxed --include_path="C:/ti/c2000/include" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/CLA_v1.0" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/source" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include" --include_path="C:/Users/ESPM/Documents/workspace_cc7/blinky_cpu01/utility Src Files" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/v4.3" --include_path="C:/ti/controlSUITE/libs/math/IQmath/v160/include" --include_path="C:/ti/controlSUITE/libs/dsp/SGEN/v101/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/include" -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 --preproc_with_compile --preproc_dependency="F2837xS_Adc.d_raw" $(GEN_OPTS__FLAG) "$<"
+=======
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 	@echo 'Finished building: "$<"'
 	@echo ' '
 
@@ -23,6 +33,16 @@ F2837xS_DefaultISR.obj: C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_c
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: C2000 Compiler'
 	"C:/ti/ti-cgt-c2000_15.12.7.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 --fp_mode=relaxed --include_path="C:/ti/ti-cgt-c2000_15.12.7.LTS/include" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/CLA_v1.0" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/source" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include" --include_path="C:/Users/ESPM/Documents/workspace_cc7/blinky_cpu01/utility Src Files" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/v4.3" --include_path="C:/ti/controlSUITE/libs/math/IQmath/v160/include" --include_path="C:/ti/controlSUITE/libs/dsp/SGEN/v101/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/include" -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 --preproc_with_compile --preproc_dependency="F2837xS_DefaultISR.d_raw" $(GEN_OPTS__FLAG) "$<"
+<<<<<<< HEAD
+	@echo 'Finished building: "$<"'
+	@echo ' '
+
+F2837xS_EPwm.obj: ../F2837xS_EPwm.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: "$<"'
+	@echo 'Invoking: C2000 Compiler'
+	"C:/ti/c2000/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 --fp_mode=relaxed --include_path="C:/ti/c2000/include" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/CLA_v1.0" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/source" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include" --include_path="C:/Users/ESPM/Documents/workspace_cc7/blinky_cpu01/utility Src Files" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/v4.3" --include_path="C:/ti/controlSUITE/libs/math/IQmath/v160/include" --include_path="C:/ti/controlSUITE/libs/dsp/SGEN/v101/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/include" -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 --preproc_with_compile --preproc_dependency="F2837xS_EPwm.d_raw" $(GEN_OPTS__FLAG) "$<"
+=======
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 	@echo 'Finished building: "$<"'
 	@echo ' '
 
@@ -72,13 +92,31 @@ PARK_F.obj: ../PARK_F.c $(GEN_OPTS) | $(GEN_HDRS)
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: C2000 Compiler'
 	"C:/ti/ti-cgt-c2000_15.12.7.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 --fp_mode=relaxed --include_path="C:/ti/ti-cgt-c2000_15.12.7.LTS/include" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/CLA_v1.0" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/source" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include" --include_path="C:/Users/ESPM/Documents/workspace_cc7/blinky_cpu01/utility Src Files" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/v4.3" --include_path="C:/ti/controlSUITE/libs/math/IQmath/v160/include" --include_path="C:/ti/controlSUITE/libs/dsp/SGEN/v101/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/include" -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 --preproc_with_compile --preproc_dependency="PARK_F.d_raw" $(GEN_OPTS__FLAG) "$<"
+<<<<<<< HEAD
 	@echo 'Finished building: "$<"'
 	@echo ' '
 
-blinky_cpu01.obj: C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_examples_Cpu1/blinky/cpu01/blinky_cpu01.c $(GEN_OPTS) | $(GEN_HDRS)
+blinky_cpu01_main.obj: ../blinky_cpu01_main.c $(GEN_OPTS) | $(GEN_HDRS)
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: C2000 Compiler'
+	"C:/ti/c2000/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 --fp_mode=relaxed --include_path="C:/ti/c2000/include" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/CLA_v1.0" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/source" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include" --include_path="C:/Users/ESPM/Documents/workspace_cc7/blinky_cpu01/utility Src Files" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/v4.3" --include_path="C:/ti/controlSUITE/libs/math/IQmath/v160/include" --include_path="C:/ti/controlSUITE/libs/dsp/SGEN/v101/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/include" -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 --preproc_with_compile --preproc_dependency="blinky_cpu01_main.d_raw" $(GEN_OPTS__FLAG) "$<"
+=======
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
+	@echo 'Finished building: "$<"'
+	@echo ' '
+
+configuration_ADC_ePWM.obj: ../configuration_ADC_ePWM.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: "$<"'
+	@echo 'Invoking: C2000 Compiler'
+<<<<<<< HEAD
+<<<<<<< HEAD
+	"C:/ti/c2000/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 --fp_mode=relaxed --include_path="C:/ti/c2000/include" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/CLA_v1.0" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/source" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include" --include_path="C:/Users/ESPM/Documents/workspace_cc7/blinky_cpu01/utility Src Files" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/v4.3" --include_path="C:/ti/controlSUITE/libs/math/IQmath/v160/include" --include_path="C:/ti/controlSUITE/libs/dsp/SGEN/v101/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/include" -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 --preproc_with_compile --preproc_dependency="configuration_ADC_ePWM.d_raw" $(GEN_OPTS__FLAG) "$<"
+=======
 	"C:/ti/ti-cgt-c2000_15.12.7.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 --fp_mode=relaxed --include_path="C:/ti/ti-cgt-c2000_15.12.7.LTS/include" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/CLA_v1.0" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/source" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include" --include_path="C:/Users/ESPM/Documents/workspace_cc7/blinky_cpu01/utility Src Files" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/v4.3" --include_path="C:/ti/controlSUITE/libs/math/IQmath/v160/include" --include_path="C:/ti/controlSUITE/libs/dsp/SGEN/v101/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/include" -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 --preproc_with_compile --preproc_dependency="blinky_cpu01.d_raw" $(GEN_OPTS__FLAG) "$<"
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
+=======
+	"C:/ti/ti-cgt-c2000_15.12.7.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 --fp_mode=relaxed --include_path="C:/ti/ti-cgt-c2000_15.12.7.LTS/include" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/CLA_v1.0" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/source" --include_path="C:/ti/controlSUITE/libs/app_libs/solar/v1.2/float/include" --include_path="C:/Users/ESPM/Documents/workspace_cc7/blinky_cpu01/utility Src Files" --include_path="C:/ti/controlSUITE/libs/app_libs/motor_control/math_blocks/v4.3" --include_path="C:/ti/controlSUITE/libs/math/IQmath/v160/include" --include_path="C:/ti/controlSUITE/libs/dsp/SGEN/v101/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/include" --include_path="C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/include" -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 --preproc_with_compile --preproc_dependency="blinky_cpu01.d_raw" $(GEN_OPTS__FLAG) "$<"
+>>>>>>> 290d8a64aeae91a793b5f06ee2c24ee3f3da3eaa
 	@echo 'Finished building: "$<"'
 	@echo ' '
 

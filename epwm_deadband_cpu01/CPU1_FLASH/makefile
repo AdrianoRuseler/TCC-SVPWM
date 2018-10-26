@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS
+CG_TOOL_ROOT := C:/ti/ccsv7/tools/compiler
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -26,9 +26,10 @@ ORDERED_OBJS += \
 "./Source/stage0.obj" \
 "./Source/stage1.obj" \
 "./Source/stage2.obj" \
+"./Source/stage3.obj" \
 $(GEN_CMDS__FLAG) \
 -lrts2800_fpu32.lib \
--l2837xS_Generic_RAM_lnk.cmd \
+-l2837xS_Generic_FLASH_lnk.cmd \
 -lF2837xS_Headers_nonBIOS.cmd \
 -llibc.a \
 
@@ -152,15 +153,15 @@ all: epwm_deadband_cpu01.out
 epwm_deadband_cpu01.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/bin/cl2000" -v28 -ml -mt --vcu_support=vcu2 --tmu_support=tmu0 --cla_support=cla1 --float_support=fpu32 -g --define=CPU1 --display_error_number --diag_suppress=10063 --diag_warning=225 -z -m"epwm_deadband_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/include" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/cmd" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/cmd" --reread_libs --display_error_number --xml_link_info="epwm_deadband_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "epwm_deadband_cpu01.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv7/tools/compiler/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --cla_support=cla1 --tmu_support=tmu0 --vcu_support=vcu2 --advice:performance=all -g --define=CPU1 --define=_FLASH --display_error_number --diag_suppress=10063 --diag_warning=225 -z -m"epwm_deadband_cpu01.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccsv7/tools/compiler/lib" -i"C:/ti/ccsv7/tools/compiler/include" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_common/cmd" -i"C:/ti/controlSUITE/device_support/F2837xS/v210/F2837xS_headers/cmd" --reread_libs --display_error_number --xml_link_info="epwm_deadband_cpu01_linkInfo.xml" --entry_point=code_start --rom_model -o "epwm_deadband_cpu01.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "ADC.obj" "F2837xS_Adc.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_CpuTimers.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "epwm_Bootstrap.obj" "Source\stage0.obj" "Source\stage1.obj" "Source\stage2.obj" 
-	-$(RM) "ADC.d" "F2837xS_Adc.d" "F2837xS_CpuTimers.d" "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "epwm_Bootstrap.d" "Source\stage0.d" "Source\stage1.d" "Source\stage2.d" 
+	-$(RM) "ADC.obj" "F2837xS_Adc.obj" "F2837xS_CodeStartBranch.obj" "F2837xS_CpuTimers.obj" "F2837xS_DefaultISR.obj" "F2837xS_EPwm.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieCtrl.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "epwm_Bootstrap.obj" "Source\stage0.obj" "Source\stage1.obj" "Source\stage2.obj" "Source\stage3.obj" 
+	-$(RM) "ADC.d" "F2837xS_Adc.d" "F2837xS_CpuTimers.d" "F2837xS_DefaultISR.d" "F2837xS_EPwm.d" "F2837xS_GlobalVariableDefs.d" "F2837xS_Gpio.d" "F2837xS_PieCtrl.d" "F2837xS_PieVect.d" "F2837xS_SysCtrl.d" "epwm_Bootstrap.d" "Source\stage0.d" "Source\stage1.d" "Source\stage2.d" "Source\stage3.d" 
 	-$(RM) "F2837xS_CodeStartBranch.d" "F2837xS_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

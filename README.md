@@ -15,3 +15,5 @@ http://www.ti.com/tool/download/C2000-CGT-15/15.12.7.LTS
 
 ## C2000Ware for C2000 MCUs  
 https://www.ti.com/tool/c2000ware
+
+http://www.ti.com/product/TMS320F28377S/technicaldocuments
